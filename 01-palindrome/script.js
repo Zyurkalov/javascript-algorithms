@@ -14,14 +14,25 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
-}
+    if (typeof str === 'string') {
+        const strOne = str.toUpperCase().split('').reverse().join('');
+        const strTwo = str.toUpperCase();
+        if (strOne === strTwo) {
+            return true
+        }else{
+            return false
+        }
+    } else {
+        console.log(`${str} - это не строка`);
+    }
+};
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
-console.log(palindrome('привет')); // false
+console.log(palindrome('п ривет')); // false
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,

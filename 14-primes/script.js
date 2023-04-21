@@ -1,14 +1,32 @@
 /*
  * Задача 14: «Простые числа»
  *
- * Напишите функцию primes(n). Её единственный аргумент — целое число n.
- * Функция должна возвращать массив простых чисел от 2 до n.
+ * Напишите функцию primes(num). Её единственный аргумент — целое число num.
+ * Функция должна возвращать массив простых чисел от 2 до num.
  * 
 */
+function findPrime(num) {
+    if ( num < 2) {
+        return false
+    }
 
-function primes(num) {
-    // Напишите код здесь
-}
+    for (let i = 2; i < num; i++) {
+      if ( num % i == 0) {
+      return false;
+      }
+    }
+    return true;
+  }
+
+function primes(num) {  
+  let isPrime = [];
+  for (let i = 2; i <= num; i++){
+    if (findPrime(i) === false) continue;
+    isPrime.push(i)
+  }
+  return isPrime
+};
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

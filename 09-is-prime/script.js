@@ -10,8 +10,19 @@
 */
 
 function isPrime(n) {
-    // Напишите код здесь
-}
+    if (n < 2) {
+        return false
+    }
+
+    for (let i = 2; i < n; i++) {
+        if ( n % i === 0) {
+        console.log(`Задача 9: false ${n} - не так прост!`)
+        return false;
+        }
+      }
+      console.log(`Задача 9: true ${n} - прост, как два пальца!`)
+      return true;
+};
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
