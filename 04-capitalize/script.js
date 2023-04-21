@@ -7,11 +7,11 @@
 */
 
 function capitalize(str) {
-    let text = str.split(' ');
+    const text = str.split(' ');
     const filterText = text.filter(function (item) {
         return item != ''  
     });
-    let array = []
+    const array = []
 
     for (let i = 0; i < filterText.length; i++) {
         array.push(filterText[i][0].toUpperCase() + filterText[i].slice(1))
